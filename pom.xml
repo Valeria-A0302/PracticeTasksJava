@@ -7,6 +7,12 @@
     <groupId>ru.ssau.tk.valeria.practice</groupId>
     <artifactId>valeria-practice</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <maven.compiler.target>1.11</maven.compiler.target>
+        <maven.compiler.source>1.11</maven.compiler.source>
+    </properties>
 
+    <dependencies>
+    </dependencies>
     
 </project>
