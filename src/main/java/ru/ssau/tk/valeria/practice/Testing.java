@@ -34,6 +34,5 @@ public class Testing {
 
         objectThree.setPassportId(3423);
         objectThree.getPassportId();
-
     }
 }

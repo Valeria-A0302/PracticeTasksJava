@@ -22,7 +22,4 @@ public class Person {
     void getPassportId(){
         System.out.println("Passport ID: "+passportId);
     }
-
-
-
 }
