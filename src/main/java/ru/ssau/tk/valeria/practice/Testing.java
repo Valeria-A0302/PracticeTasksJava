@@ -3,36 +3,23 @@ package ru.ssau.tk.valeria.practice;
 public class Testing {
     public static void main(String[] args) {
         Person objectOne = new Person();
-
-        objectOne.setFirstName("Ildar");
         objectOne.getFirstName();
-
-        objectOne.setLastName("Idiyatov");
         objectOne.getLastName();
-
-        objectOne.setPassportId(5764);
         objectOne.getPassportId();
+        System.out.println();
 
-        Person objectTwo = new Person();
-
-        objectTwo.setFirstName("Valeria");
+        Person objectTwo = new Person("Valуria","Atapina");
         objectTwo.getFirstName();
-
-        objectTwo.setLastName("Atapina");
         objectTwo.getLastName();
+        System.out.println();
 
-        objectTwo.setPassportId(2352);
-        objectTwo.getPassportId();
-
-        Person objectThree = new Person();
-
-        objectThree.setFirstName("Ivan");
-        objectThree.getFirstName();
-
-        objectThree.setLastName("Ivanov");
-        objectThree.getLastName();
-
-        objectThree.setPassportId(3423);
+        Person objectThree = new Person(4526);
         objectThree.getPassportId();
+        System.out.println();
+
+        Person objectFour = new Person ("Ivan","Petrov", 9243);
+        objectFour.getFirstName();
+        objectFour.getLastName();
+        objectFour.getPassportId();
     }
 }
