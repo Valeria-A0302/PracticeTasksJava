@@ -5,6 +5,10 @@ public class Points {
     public double y;
     public double z;
 
+    public static double length(Point point) {
+        return point.length();
+    }
+
     public Points (double x, double y, double z){
         this.x = x;
         this.y = y;
