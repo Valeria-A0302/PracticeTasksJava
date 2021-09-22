@@ -24,9 +24,7 @@ public class Person {
         this.passportId = passportId;
     }
 
-    void setFirstName(String firstName){
-        this.firstName = firstName;
-    }
+    void setFirstName(String firstName){ this.firstName = firstName; }
     void getFirstName(){
         System.out.println("First name: "+firstName);
     }
