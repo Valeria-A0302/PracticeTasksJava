@@ -8,8 +8,20 @@ public class Testing {
         System.out.println("Деление: "+Points.divide(49.0, 7.0));
 
         Points point = new Points(3, 5, 7);
+
+        System.out.println("Умножение координат на числа: ");
         System.out.println(Points.enlarge(point,3).getX());
         System.out.println(Points.enlarge(point,2).getY());
         System.out.println(Points.enlarge(point,7).getZ());
+
+        System.out.println("Отрицательные координаты: ");
+        System.out.println(Points.opposite(point).getX());
+        System.out.println(Points.opposite(point).getY());
+        System.out.println(Points.opposite(point).getZ());
+
+        System.out.println("Деление единицы на координаты: ");
+        System.out.println(Points.inverse(point).getX());
+        System.out.println(Points.inverse(point).getY());
+        System.out.println(Points.inverse(point).getZ());
     }
 }

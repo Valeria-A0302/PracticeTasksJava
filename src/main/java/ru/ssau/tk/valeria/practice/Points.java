@@ -26,6 +26,12 @@ public class Points {
     public static Points enlarge(Points point, double someNumber){
         return new Points(point.getX()*someNumber, point.getY()*someNumber, point.getZ()*someNumber);
     }
+    public static Points opposite(Points point){
+        return new Points(point.getX()*(-1),point.getY()*(-1),point.getZ()*(-1) );
+    }
+    public static Points inverse(Points point){
+        return new Points(1 / point.getX(), 1 / point.getY(), 1 / point.getZ());
+    }
     public static double sum(double pointOne, double pointTwo){
         return pointOne + pointTwo;
     }
