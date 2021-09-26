@@ -2,26 +2,18 @@ package ru.ssau.tk.valeria.practice;
 
 public class Testing {
     public static void main(String[] args) {
-        System.out.println("Сложение: "+Points.sum (23.5,1.5));
-        System.out.println("Вычитание: "+Points.subtract(23.6,2.6));
-        System.out.println("Умножение: "+Points.multiply(12.0,4.0));
-        System.out.println("Деление: "+Points.divide(49.0, 7.0));
 
-        Points point = new Points(3, 5, 7);
+        Points pointOne = new Points(3, 5, 7);
+        Points pointTwo = new Points(4, 6,8);
+        System.out.println("Скалярное произведение: ");
+        System.out.println(pointOne.getX()*pointTwo.getX() + pointOne.getY()*pointTwo.getY() + pointOne.getZ()*pointTwo.getZ());
 
-        System.out.println("Умножение координат на числа: ");
-        System.out.println(Points.enlarge(point,3).getX());
-        System.out.println(Points.enlarge(point,2).getY());
-        System.out.println(Points.enlarge(point,7).getZ());
+        System.out.println();
 
-        System.out.println("Отрицательные координаты: ");
-        System.out.println(Points.opposite(point).getX());
-        System.out.println(Points.opposite(point).getY());
-        System.out.println(Points.opposite(point).getZ());
+        System.out.println("Векторное произведение: ");
+        System.out.println(Points.vectorProduct(pointOne, pointTwo).getX());
+        System.out.println(Points.vectorProduct(pointOne, pointTwo).getY());
+        System.out.println(Points.vectorProduct(pointOne, pointTwo).getZ());
 
-        System.out.println("Деление единицы на координаты: ");
-        System.out.println(Points.inverse(point).getX());
-        System.out.println(Points.inverse(point).getY());
-        System.out.println(Points.inverse(point).getZ());
     }
 }

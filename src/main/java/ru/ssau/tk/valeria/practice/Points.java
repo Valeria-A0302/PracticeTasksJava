@@ -9,6 +9,14 @@ public class Points {
         return point.length();
     }
 
+    public static double scalarProduct(Points pointOne, Points pointTwo){
+        return (pointOne.getX()*pointTwo.getX() + pointOne.getY()*pointTwo.getY() + pointOne.getZ()*pointTwo.getZ());
+    }
+
+    public static Points vectorProduct(Points pointOne, Points pointTwo){
+        return new Points(pointOne.getY()*pointTwo.getZ() - pointOne.getZ()*pointTwo.getY(), pointOne.getZ()*pointTwo.getX() - pointOne.getX()*pointTwo.getZ(), pointOne.getX()*pointTwo.getY() - pointOne.getY()*pointTwo.getX());
+    }
+
     public Points (double x, double y, double z){
         this.x = x;
         this.y = y;
