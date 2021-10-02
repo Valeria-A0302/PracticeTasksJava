@@ -1,12 +1,12 @@
 package ru.ssau.tk.valeria.practice;
 
-public class Testing {
+public class Main {
     public static void main(String[] args) {
 
         Points pointOne = new Points(3, 5, 7);
-        Points pointTwo = new Points(4, 6,8);
+        Points pointTwo = new Points(4, 6, 8);
         System.out.println("Скалярное произведение: ");
-        System.out.println(pointOne.getX()*pointTwo.getX() + pointOne.getY()*pointTwo.getY() + pointOne.getZ()*pointTwo.getZ());
+        System.out.println(pointOne.getX() * pointTwo.getX() + pointOne.getY() * pointTwo.getY() + pointOne.getZ() * pointTwo.getZ());
 
         System.out.println();
 
