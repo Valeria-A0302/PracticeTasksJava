@@ -4,20 +4,13 @@ public class MyClass {
     public static void main(String[] args) {
         Person person = new Person();
         person.setFirstName("Arkadiy");
-        int number = 5;
-        checkInt();
-        checkPerson(person);
-        System.out.println(number);
+        checkAnotherPerson();
         System.out.println(person.getFirstName());
     }
 
-    private static void checkInt() {
-        int number = 10;
-        System.out.println(number);
-    }
-
-    private static void checkPerson(Person person) {
-        person.setFirstName("Oleg");
+    private static void checkAnotherPerson() {
+        Person person = new Person();
+        person.setFirstName("Ignat");
         System.out.println(person.getFirstName());
     }
 }
