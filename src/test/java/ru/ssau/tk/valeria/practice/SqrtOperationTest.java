@@ -4,25 +4,22 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SqrtOperationTest {
-    final static double number = 256.0;
-    public static final double POSITIVE_INFINITY = 1.0 / 0.0;
-    public static final double NEGATIVE_INFINITY = -1.0 / 0.0;
-    SqrtOperation iTest = new SqrtOperation();
+    SqrtOperation sqrtTest = new SqrtOperation();
 
     @Test
     public void applyTest() {
-        Assert.assertEquals(iTest.apply(number), 16.0);
-        Assert.assertEquals(iTest.apply(POSITIVE_INFINITY), POSITIVE_INFINITY);
-        Assert.assertEquals(iTest.apply(NEGATIVE_INFINITY), POSITIVE_INFINITY - POSITIVE_INFINITY);
-        Assert.assertEquals(iTest.apply(0.0), 0.0);
+        Assert.assertEquals(sqrtTest.apply(256.0), 16.0);
+        Assert.assertEquals(sqrtTest.apply(Double.POSITIVE_INFINITY), Double.POSITIVE_INFINITY);
+        Assert.assertEquals(sqrtTest.apply(Double.NEGATIVE_INFINITY), Double.NaN);
+        Assert.assertEquals(sqrtTest.apply(Double.NaN), Double.NaN);
     }
 
     @Test
     public void applyTripleTest() {
-        Assert.assertEquals(iTest.applyTriple(number), 2.0);
-        Assert.assertEquals(iTest.applyTriple(POSITIVE_INFINITY), POSITIVE_INFINITY);
-        Assert.assertEquals(iTest.applyTriple(NEGATIVE_INFINITY), POSITIVE_INFINITY - POSITIVE_INFINITY);
-        Assert.assertEquals(iTest.applyTriple(0.0), 0.0);
+        Assert.assertEquals(sqrtTest.applyTriple(256.0), 2.0);
+        Assert.assertEquals(sqrtTest.applyTriple(Double.POSITIVE_INFINITY), Double.POSITIVE_INFINITY);
+        Assert.assertEquals(sqrtTest.applyTriple(Double.NEGATIVE_INFINITY), Double.NaN);
+        Assert.assertEquals(sqrtTest.applyTriple(Double.NaN), Double.NaN);
     }
 
 }
