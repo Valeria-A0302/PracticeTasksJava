@@ -27,11 +27,12 @@ public class PersonTest {
     }
 
     @Test
-    public static void testingConstructorWithoutParametersConstructor() {
+    public static void testingConstructorWithoutParameters() {
         Person person = new Person();
         Assert.assertEquals(person.getFirstName(), "Unknown");
         Assert.assertEquals(person.getLastName(), "Unknown");
         Assert.assertEquals(person.getPassportId(), 0);
+        Assert.assertEquals(person.getGender(), Gender.MALE);
     }
 
     @Test
@@ -48,10 +49,19 @@ public class PersonTest {
     }
 
     @Test
-    public static void testingConstructorWithThreeParameter() {
+    public static void testingConstructorWithThreeParameters() {
         Person person = new Person("Valeria", "Atapina", 1234);
         Assert.assertEquals(person.getFirstName(), "Valeria");
         Assert.assertEquals(person.getLastName(), "Atapina");
         Assert.assertEquals(person.getPassportId(), 1234);
+    }
+
+    @Test
+    public static void testingConstructorWithFourParameters() {
+        Person person = new Person("Valeria", "Atapina", 1234, Gender.FEMALE);
+        Assert.assertEquals(person.getFirstName(), "Valeria");
+        Assert.assertEquals(person.getLastName(), "Atapina");
+        Assert.assertEquals(person.getPassportId(), 1234);
+        Assert.assertEquals(person.getGender(), Gender.FEMALE);
     }
 }
