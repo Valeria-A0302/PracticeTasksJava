@@ -1,9 +1,9 @@
 package ru.ssau.tk.valeria.practice;
 
 public class Point {
-    public final double x;
-    public final double y;
-    public final double z;
+    public double x;
+    public double y;
+    public double z;
 
     public double length() {
         return Math.sqrt(x * x + y * y + z * z);
