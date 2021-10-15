@@ -39,4 +39,11 @@ public class NamedPointTest {
         Assert.assertEquals(point.getZ(), 0.3);
         Assert.assertEquals(point.getName(), "Fake");
     }
+
+    @Test
+    public static void testReset() {
+        NamedPoint object = new NamedPoint();
+        object.reset();
+        Assert.assertEquals(object.getName(), "Absent");
+    }
 }

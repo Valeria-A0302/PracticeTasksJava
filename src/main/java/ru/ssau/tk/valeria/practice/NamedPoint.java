@@ -1,8 +1,13 @@
 package ru.ssau.tk.valeria.practice;
 
-public class NamedPoint extends Point {
+public class NamedPoint extends Point implements Resettable {
 
     String name;
+
+    @Override
+    public void reset() {
+        this.name = "Absent";
+    }
 
     public NamedPoint(double x, double y, double z) {
         super(x, y, z);
