@@ -12,5 +12,12 @@ public class MyArraysTest {
         Assert.assertEquals(size(1).length, 1);
         Assert.assertEquals(size(0).length, 0);
     }
+    @Test
+    public static void testGenerator(){
+        Assert.assertEquals(generator(4)[0],2 );
+        Assert.assertEquals(generator(4)[1],1 );
+        Assert.assertEquals(generator(4)[2],1 );
+        Assert.assertEquals(generator(4)[3],2 );
+    }
 
 }
