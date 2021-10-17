@@ -42,4 +42,17 @@ public class MyArraysTest {
         Assert.assertEquals(evenArray(7)[5], 12);
         Assert.assertEquals(evenArray(7)[6], 14);
     }
+
+    @Test
+    public static void testFibonacciNumbers() {
+        Assert.assertEquals(fibonacciNumbers(8)[0], 0);
+        Assert.assertEquals(fibonacciNumbers(8)[1], 1);
+        Assert.assertEquals(fibonacciNumbers(8)[2], 1);
+        Assert.assertEquals(fibonacciNumbers(8)[3], 2);
+        Assert.assertEquals(fibonacciNumbers(8)[4], 3);
+        Assert.assertEquals(fibonacciNumbers(8)[5], 5);
+        Assert.assertEquals(fibonacciNumbers(8)[6], 8);
+        Assert.assertEquals(fibonacciNumbers(8)[7], 13);
+    }
+
 }

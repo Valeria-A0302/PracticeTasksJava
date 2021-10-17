@@ -31,4 +31,13 @@ public class MyArrays {
         return array;
     }
 
+    public static int[] fibonacciNumbers(int length) {
+        int[] array = new int[length];
+        array[0] = 0;
+        array[1] = 1;
+        for (int element = 2; element < length; element++) {
+            array[element] = array[element - 1] + array[element - 2];
+        }
+        return array;
+    }
 }
