@@ -55,4 +55,18 @@ public class MyArraysTest {
         Assert.assertEquals(fibonacciNumbers(8)[7], 13);
     }
 
+    @Test
+    public static void testSquareOfNumbers() {
+        Assert.assertEquals(squareOfNumbers(10)[0], 0);
+        Assert.assertEquals(squareOfNumbers(10)[1], 1);
+        Assert.assertEquals(squareOfNumbers(10)[2], 4);
+        Assert.assertEquals(squareOfNumbers(10)[3], 9);
+        Assert.assertEquals(squareOfNumbers(10)[4], 16);
+        Assert.assertEquals(squareOfNumbers(10)[5], 25);
+        Assert.assertEquals(squareOfNumbers(10)[6], 36);
+        Assert.assertEquals(squareOfNumbers(10)[7], 49);
+        Assert.assertEquals(squareOfNumbers(10)[8], 64);
+        Assert.assertEquals(squareOfNumbers(10)[9], 81);
+    }
+
 }

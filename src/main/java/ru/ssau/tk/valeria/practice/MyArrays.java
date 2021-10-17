@@ -40,4 +40,12 @@ public class MyArrays {
         }
         return array;
     }
+
+    public static int[] squareOfNumbers(int length) {
+        int[] array = new int[length];
+        for (int element = 0; element < length; element++) {
+            array[element] = element * element;
+        }
+        return array;
+    }
 }
