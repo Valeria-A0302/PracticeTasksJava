@@ -48,4 +48,40 @@ public class MyArrays {
         }
         return array;
     }
+
+    public static double[] twoSolutions(double x1, double x2) {
+        if (x1 > x2) {
+            return new double[]{x1, x2};
+        }
+        return new double[]{x2, x1};
+    }
+
+    public static double[] oneSolution(double x) {
+        double[] array = new double[1];
+        array[0] = x;
+        return array;
+    }
+
+    public static double[] noSolutionsAtAll() {
+        return new double[0];
+    }
+
+    public static double[] quadraticEquation(double a, double b, double c) {
+        double discriminant = b * b - 4 * a * c;
+        double sqrt = Math.sqrt(discriminant);
+        if (a == 0) {
+            double x = -c / b;
+            return oneSolution(x);
+        }
+        if (discriminant < 0) {
+            return noSolutionsAtAll();
+        }
+        if (discriminant == 0) {
+            double x = (-b) / (2 * a);
+            return oneSolution(x);
+        }
+        double x1 = ((-b) + sqrt) / (2 * a);
+        double x2 = ((-b) - sqrt) / (2 * a);
+        return twoSolutions(x1, x2);
+    }
 }
