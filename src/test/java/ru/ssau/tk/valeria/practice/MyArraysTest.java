@@ -31,4 +31,15 @@ public class MyArraysTest {
         Assert.assertEquals(oddArray(7)[5], 11);
         Assert.assertEquals(oddArray(7)[6], 13);
     }
+
+    @Test
+    public static void testEvenArray() {
+        Assert.assertEquals(evenArray(7)[0], 2);
+        Assert.assertEquals(evenArray(7)[1], 4);
+        Assert.assertEquals(evenArray(7)[2], 6);
+        Assert.assertEquals(evenArray(7)[3], 8);
+        Assert.assertEquals(evenArray(7)[4], 10);
+        Assert.assertEquals(evenArray(7)[5], 12);
+        Assert.assertEquals(evenArray(7)[6], 14);
+    }
 }
