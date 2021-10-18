@@ -84,4 +84,18 @@ public class MyArrays {
         double x2 = ((-b) - sqrt) / (2 * a);
         return twoSolutions(x1, x2);
     }
+
+    public static int[] arrayWithoutTriples(int length) {
+        int[] array = new int[length];
+        int number = 1;
+        for (int element = 0; element < length; element++, number++) {
+            if (number % 3 == 0) {
+                array[element] = number + 1;
+                number++;
+            } else {
+                array[element] = number;
+            }
+        }
+        return array;
+    }
 }

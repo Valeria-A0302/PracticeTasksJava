@@ -79,4 +79,15 @@ public class MyArraysTest {
         Assert.assertEquals(quadraticEquation(2, 8, 2)[1], -3.7320, DELTA);
         Assert.assertEquals(quadraticEquation(0, 0, 0)[0], Double.NaN);
     }
+
+    @Test
+    public static void testArrayWithoutTriples() {
+        Assert.assertEquals(arrayWithoutTriples(7)[0], 1);
+        Assert.assertEquals(arrayWithoutTriples(7)[1], 2);
+        Assert.assertEquals(arrayWithoutTriples(7)[2], 4);
+        Assert.assertEquals(arrayWithoutTriples(7)[3], 5);
+        Assert.assertEquals(arrayWithoutTriples(7)[4], 7);
+        Assert.assertEquals(arrayWithoutTriples(7)[5], 8);
+        Assert.assertEquals(arrayWithoutTriples(7)[6], 10);
+    }
 }
