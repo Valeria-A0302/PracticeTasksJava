@@ -73,8 +73,7 @@ public class MyArraysTest {
 
     @Test
     public static void testQuadraticEquation() {
-        double[] emptyArray = {};
-        Assert.assertEquals(quadraticEquation(2, 3, 4), emptyArray);
+        Assert.assertEquals(quadraticEquation(2, 3, 4), new double[0]);
         Assert.assertEquals(quadraticEquation(0, 3, 4)[0], -1.3333, DELTA);
         Assert.assertEquals(quadraticEquation(2, 8, 2)[0], -0.2679, DELTA);
         Assert.assertEquals(quadraticEquation(2, 8, 2)[1], -3.7320, DELTA);
