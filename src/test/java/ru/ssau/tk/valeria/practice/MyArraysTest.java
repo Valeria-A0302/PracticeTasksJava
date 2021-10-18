@@ -90,4 +90,18 @@ public class MyArraysTest {
         Assert.assertEquals(arrayWithoutTriples(7)[5], 8);
         Assert.assertEquals(arrayWithoutTriples(7)[6], 10);
     }
+
+    @Test
+    public static void testArithmeticProgression() {
+        Assert.assertEquals(arithmeticProgression(1, 3, 10)[0], 1);
+        Assert.assertEquals(arithmeticProgression(1, 3, 10)[1], 4);
+        Assert.assertEquals(arithmeticProgression(1, 3, 10)[2], 7);
+        Assert.assertEquals(arithmeticProgression(1, 3, 10)[3], 10);
+        Assert.assertEquals(arithmeticProgression(1, 3, 10)[4], 13);
+        Assert.assertEquals(arithmeticProgression(1, 3, 10)[5], 16);
+        Assert.assertEquals(arithmeticProgression(1, 3, 10)[6], 19);
+        Assert.assertEquals(arithmeticProgression(1, 3, 10)[7], 22);
+        Assert.assertEquals(arithmeticProgression(1, 3, 10)[8], 25);
+        Assert.assertEquals(arithmeticProgression(1, 3, 10)[9], 28);
+    }
 }

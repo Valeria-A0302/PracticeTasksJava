@@ -98,4 +98,14 @@ public class MyArrays {
         }
         return array;
     }
+
+    public static int[] arithmeticProgression(int firstMember, int difference, int numberOfMembers) {
+        int[] array = new int[numberOfMembers];
+        array[0] = firstMember;
+        for (int element = 1; element < numberOfMembers; element++) {
+            array[element] = firstMember + difference;
+            firstMember+=difference;
+        }
+        return array;
+    }
 }
