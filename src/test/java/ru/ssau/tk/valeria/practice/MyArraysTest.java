@@ -113,4 +113,13 @@ public class MyArraysTest {
         Assert.assertEquals(geometricProgression(1, 4, 5)[3], 64);
         Assert.assertEquals(geometricProgression(1, 4, 5)[4], 256);
     }
+
+    @Test
+    public static void testDivisorOfNumber() {
+        Assert.assertEquals(divisorOfNumber(36).get(0), Integer.valueOf(1));
+        Assert.assertEquals(divisorOfNumber(36).get(1), Integer.valueOf(2));
+        Assert.assertEquals(divisorOfNumber(36).get(2), Integer.valueOf(3));
+        Assert.assertEquals(divisorOfNumber(36).get(3), Integer.valueOf(4));
+        Assert.assertEquals(divisorOfNumber(36).get(4), Integer.valueOf(6));
+    }
 }
