@@ -104,4 +104,13 @@ public class MyArraysTest {
         Assert.assertEquals(arithmeticProgression(1, 3, 10)[8], 25);
         Assert.assertEquals(arithmeticProgression(1, 3, 10)[9], 28);
     }
+
+    @Test
+    public static void testGeometricProgression() {
+        Assert.assertEquals(geometricProgression(1, 4, 5)[0], 1);
+        Assert.assertEquals(geometricProgression(1, 4, 5)[1], 4);
+        Assert.assertEquals(geometricProgression(1, 4, 5)[2], 16);
+        Assert.assertEquals(geometricProgression(1, 4, 5)[3], 64);
+        Assert.assertEquals(geometricProgression(1, 4, 5)[4], 256);
+    }
 }
