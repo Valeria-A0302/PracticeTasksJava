@@ -1,6 +1,7 @@
 package ru.ssau.tk.valeria.practice;
 
 import java.util.ArrayList;
+import java.util.*;
 
 public class MyArrays {
     public static int[] size(int length) {
@@ -124,10 +125,31 @@ public class MyArrays {
     public static ArrayList<Integer> divisorOfNumber(int number) {
         ArrayList<Integer> array = new ArrayList<>();
         for (int element = 1; element <= Math.sqrt(Math.abs(number)); element++) {
-            if (number % (element) == 0) {
+            if (number % element == 0) {
                 array.add(element);
             }
         }
         return array;
     }
+
+    public static boolean isItSimple(Integer number) {
+        for (int divider = number - 1; divider > 1; divider--) {
+            if (number % divider == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static ArrayList<Integer> primeNumbers(int number) {
+        ArrayList<Integer> array = new ArrayList<>();
+        for (int primeNumber = number; primeNumber > 1; primeNumber--) {
+            if (isItSimple(primeNumber)) {
+                array.add(primeNumber);
+            }
+        }
+        Collections.reverse(array);
+        return array;
+    }
+
 }

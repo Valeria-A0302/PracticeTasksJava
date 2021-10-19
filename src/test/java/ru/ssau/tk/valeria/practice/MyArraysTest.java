@@ -122,4 +122,23 @@ public class MyArraysTest {
         Assert.assertEquals(divisorOfNumber(36).get(3), Integer.valueOf(4));
         Assert.assertEquals(divisorOfNumber(36).get(4), Integer.valueOf(6));
     }
+
+    @Test
+    public static void testIsItSimple() {
+        Assert.assertTrue(isItSimple(11));
+        Assert.assertFalse(isItSimple(4));
+        Assert.assertTrue(isItSimple(13));
+        Assert.assertTrue(isItSimple(17));
+        Assert.assertFalse(isItSimple(12));
+        Assert.assertFalse(isItSimple(9));
+    }
+
+    @Test
+    public static void testPrimeNumbers() {
+        Assert.assertEquals(primeNumbers(18).get(0), Integer.valueOf(2));
+        Assert.assertEquals(primeNumbers(18).get(1), Integer.valueOf(3));
+        Assert.assertEquals(primeNumbers(18).get(2), Integer.valueOf(5));
+        Assert.assertEquals(primeNumbers(18).get(3), Integer.valueOf(7));
+        Assert.assertEquals(primeNumbers(18).get(4), Integer.valueOf(11));
+    }
 }
