@@ -166,4 +166,13 @@ public class MyArrays {
             array[element] = -array[element];
         }
     }
+
+    public static boolean checkingArray(int[] array, int number) {
+        for (int i : array) {
+            if (i == number) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

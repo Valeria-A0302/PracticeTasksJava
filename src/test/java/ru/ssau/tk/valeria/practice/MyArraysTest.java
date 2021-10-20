@@ -165,4 +165,11 @@ public class MyArraysTest {
         oppositeSign(array);
         Assert.assertEquals(array, new double[]{-1.7, 3, -4, 21.3, -2});
     }
+
+    @Test
+    public static void testCheckingArray() {
+        int[] array = new int[]{1, 2, 3, 4, 5, 6};
+        Assert.assertTrue(checkingArray(array, 5));
+        Assert.assertFalse(checkingArray(array, 10));
+    }
 }
