@@ -175,4 +175,13 @@ public class MyArrays {
         }
         return false;
     }
+
+    public static boolean arrayInteger(Integer[] array) {
+        for (Integer i : array) {
+            if (i == null) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

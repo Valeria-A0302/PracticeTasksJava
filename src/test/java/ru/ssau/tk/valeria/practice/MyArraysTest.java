@@ -172,4 +172,12 @@ public class MyArraysTest {
         Assert.assertTrue(checkingArray(array, 5));
         Assert.assertFalse(checkingArray(array, 10));
     }
+
+    @Test
+    public static void testArrayInteger() {
+        Integer[] array = new Integer[]{1, 3, 4, 6, 8, 26, 256};
+        Assert.assertFalse(arrayInteger(array));
+        Integer[] arrayTwo = new Integer[]{1, 545, 3453, null, 342};
+        Assert.assertTrue(arrayInteger(arrayTwo));
+    }
 }
