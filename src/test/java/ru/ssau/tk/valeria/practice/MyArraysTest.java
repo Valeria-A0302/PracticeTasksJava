@@ -141,4 +141,21 @@ public class MyArraysTest {
         Assert.assertEquals(primeNumbers(18).get(3), Integer.valueOf(7));
         Assert.assertEquals(primeNumbers(18).get(4), Integer.valueOf(11));
     }
+
+    @Test
+    public static void testSymmetry() {
+        Assert.assertEquals(symmetry(7)[0], 1);
+        Assert.assertEquals(symmetry(7)[1], 2);
+        Assert.assertEquals(symmetry(7)[2], 3);
+        Assert.assertEquals(symmetry(7)[3], 4);
+        Assert.assertEquals(symmetry(7)[4], 3);
+        Assert.assertEquals(symmetry(7)[5], 2);
+        Assert.assertEquals(symmetry(7)[6], 1);
+
+        Assert.assertEquals(symmetry(5)[0], 1);
+        Assert.assertEquals(symmetry(5)[1], 2);
+        Assert.assertEquals(symmetry(5)[2], 3);
+        Assert.assertEquals(symmetry(5)[3], 2);
+        Assert.assertEquals(symmetry(5)[4], 1);
+    }
 }

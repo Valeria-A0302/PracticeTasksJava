@@ -152,4 +152,12 @@ public class MyArrays {
         return array;
     }
 
+    public static int[] symmetry(int length) {
+        int[] array = new int[length];
+        for (int element = 0; element <= length / 2; element++) {
+            array[element] = element + 1;
+            array[length - 1 - element] = element + 1;
+        }
+        return array;
+    }
 }
