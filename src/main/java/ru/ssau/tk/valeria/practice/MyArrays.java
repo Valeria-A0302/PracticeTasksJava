@@ -160,4 +160,10 @@ public class MyArrays {
         }
         return array;
     }
+
+    public static void oppositeSign(double[] array) {
+        for (int element = 0; element < array.length; element++) {
+            array[element] = -array[element];
+        }
+    }
 }

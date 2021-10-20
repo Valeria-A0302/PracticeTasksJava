@@ -158,4 +158,11 @@ public class MyArraysTest {
         Assert.assertEquals(symmetry(5)[3], 2);
         Assert.assertEquals(symmetry(5)[4], 1);
     }
+
+    @Test
+    public static void testOppositeSign() {
+        double[] array = new double[]{1.7, -3, 4, -21.3, 2};
+        oppositeSign(array);
+        Assert.assertEquals(array, new double[]{-1.7, 3, -4, 21.3, -2});
+    }
 }
