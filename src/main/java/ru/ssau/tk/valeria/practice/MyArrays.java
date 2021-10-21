@@ -194,4 +194,17 @@ public class MyArrays {
         }
         return sum;
     }
+
+    public static Number maximum(Integer[] array) {
+        if (array.length == 0) {
+            return null;
+        }
+        int maximum = array[0];
+        for (Integer integer : array) {
+            if (integer > maximum) {
+                maximum = integer;
+            }
+        }
+        return maximum;
+    }
 }

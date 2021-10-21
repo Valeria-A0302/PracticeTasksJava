@@ -190,4 +190,16 @@ public class MyArraysTest {
         int[] arrayThree = new int[]{0, 2, 100, 4, 5, 13, 7, 31, 17, 11};
         Assert.assertEquals(evenNumbers(arrayThree), 4);
     }
+
+    @Test
+    public static void testMaximum() {
+        Integer[] array = new Integer[]{1, 2, 5, 6, 3, 4, 0};
+        Assert.assertEquals(maximum(array), 6);
+        Integer[] arrayTwo = new Integer[]{};
+        Assert.assertNull(maximum(arrayTwo));
+        Integer[] arrayThree = new Integer[]{0, 5, 7, 3, 10};
+        Assert.assertEquals(maximum(arrayThree), 10);
+        Integer[] arrayFour = new Integer[]{50, 15, 2, 3, 11};
+        Assert.assertEquals(maximum(arrayFour), 50);
+    }
 }
