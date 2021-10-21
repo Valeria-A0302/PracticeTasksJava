@@ -180,4 +180,14 @@ public class MyArraysTest {
         Integer[] arrayTwo = new Integer[]{1, 545, 3453, null, 342};
         Assert.assertTrue(arrayInteger(arrayTwo));
     }
+
+    @Test
+    public static void testEvenNumbers() {
+        int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 10, 12};
+        Assert.assertEquals(evenNumbers(array), 6);
+        int[] arrayTwo = new int[]{24, 2, 16, 4, 5, 6, 7, 11, 33};
+        Assert.assertEquals(evenNumbers(arrayTwo), 5);
+        int[] arrayThree = new int[]{0, 2, 100, 4, 5, 13, 7, 31, 17, 11};
+        Assert.assertEquals(evenNumbers(arrayThree), 4);
+    }
 }
