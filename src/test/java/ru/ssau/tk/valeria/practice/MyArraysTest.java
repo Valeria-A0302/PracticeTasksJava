@@ -202,4 +202,12 @@ public class MyArraysTest {
         Integer[] arrayFour = new Integer[]{50, 15, 2, 3, 11};
         Assert.assertEquals(maximum(arrayFour), 50);
     }
+
+    @Test
+    public static void testSunOfIndexes() {
+        int[] array = new int[]{1, 2, 3, 4, 5, 6, 7};
+        Assert.assertEquals(sunOfIndexes(array), 16);
+        int[] arrayTwo = new int[]{24, 2, 16, 4, 5, 6, 7, 11, 33};
+        Assert.assertEquals(sunOfIndexes(arrayTwo), 85);
+    }
 }

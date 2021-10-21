@@ -207,4 +207,14 @@ public class MyArrays {
         }
         return maximum;
     }
+
+    public static int sunOfIndexes(int[] array) {
+        int sum = 0;
+        for (int element = 0; element < array.length; element++) {
+            if (element % 2 == 0) {
+                sum += array[element];
+            }
+        }
+        return sum;
+    }
 }
