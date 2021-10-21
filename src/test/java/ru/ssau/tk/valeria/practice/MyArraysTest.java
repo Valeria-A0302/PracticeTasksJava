@@ -218,4 +218,12 @@ public class MyArraysTest {
         int[] arrayTwo = new int[]{7, 6, 5, 4, 3, 2, 1};
         Assert.assertFalse(divisionIntoFirstAndLastElement(arrayTwo));
     }
+
+    @Test
+    public static void testMostCommonNumber() {
+        int[] array = new int[]{1, 2, 1, 4, 5, 2, 6, 2, 2, 3, 4, 7};
+        Assert.assertEquals(mostCommonNumber(array), 2);
+        int[] arrayTwo = new int[]{1, 1, 1, 2, 2, 2};
+        Assert.assertEquals(mostCommonNumber(arrayTwo), 1);
+    }
 }

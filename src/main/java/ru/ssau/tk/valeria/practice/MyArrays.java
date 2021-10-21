@@ -231,4 +231,25 @@ public class MyArrays {
         }
         return first > last;
     }
+
+    public static int mostCommonNumber(int[] array) {
+        int countMax = 0;
+        int count = 0;
+        int indexMax = 0;
+        int index = 0;
+        for (int i = 0; i < array.length; i++) {
+            for (int k = i; k < array.length; k++) {
+                if (array[i] == array[k]) {
+                    count++;
+                }
+            }
+            if (count > countMax) {
+                countMax = count;
+                indexMax = index;
+            }
+            index++;
+            count = 0;
+        }
+        return array[indexMax];
+    }
 }
