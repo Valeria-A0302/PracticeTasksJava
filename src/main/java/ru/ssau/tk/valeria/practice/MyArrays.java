@@ -217,4 +217,18 @@ public class MyArrays {
         }
         return sum;
     }
+
+    public static boolean divisionIntoFirstAndLastElement(int[] array) {
+        int first = 0;
+        int last = 0;
+        for (int i : array) {
+            if (i % array[0] == 0) {
+                first++;
+            }
+            if (i % array[array.length - 1] == 0) {
+                last++;
+            }
+        }
+        return first > last;
+    }
 }

@@ -210,4 +210,12 @@ public class MyArraysTest {
         int[] arrayTwo = new int[]{24, 2, 16, 4, 5, 6, 7, 11, 33};
         Assert.assertEquals(sunOfIndexes(arrayTwo), 85);
     }
+
+    @Test
+    public static void testDivisionIntoFirstAndLastElement() {
+        int[] array = new int[]{1, 2, 3, 4, 5, 6, 7};
+        Assert.assertTrue(divisionIntoFirstAndLastElement(array));
+        int[] arrayTwo = new int[]{7, 6, 5, 4, 3, 2, 1};
+        Assert.assertFalse(divisionIntoFirstAndLastElement(arrayTwo));
+    }
 }
