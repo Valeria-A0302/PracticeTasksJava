@@ -226,4 +226,10 @@ public class MyArraysTest {
         int[] arrayTwo = new int[]{1, 1, 1, 2, 2, 2};
         Assert.assertEquals(mostCommonNumber(arrayTwo), 1);
     }
+
+    @Test
+    public static void testIndex() {
+        int[] array = new int[]{10, 9, 8, 7, 6, 5, 4};
+        Assert.assertEquals(index(array, 7), 3);
+    }
 }

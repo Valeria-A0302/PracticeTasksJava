@@ -252,4 +252,13 @@ public class MyArrays {
         }
         return array[indexMax];
     }
+
+    public static int index(int[] array, int number) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == number) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
