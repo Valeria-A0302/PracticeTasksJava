@@ -240,4 +240,23 @@ public class MyArraysTest {
         Assert.assertEquals(array[0], 10);
         Assert.assertEquals(array[9], 1);
     }
+
+    @Test
+    public static void testBitwiseNegation() {
+        int[] array = new int[]{10, 2, 3, 4, 5};
+        bitwiseNegation(array);
+        Assert.assertEquals(array[0], -11);
+        Assert.assertEquals(array[1], -3);
+        Assert.assertEquals(array[2], -4);
+        Assert.assertEquals(array[3], -5);
+        Assert.assertEquals(array[4], -6);
+
+        bitwiseNegation(array);
+        Assert.assertEquals(array[0], 10);
+        Assert.assertEquals(array[1], 2);
+        Assert.assertEquals(array[2], 3);
+        Assert.assertEquals(array[3], 4);
+        Assert.assertEquals(array[4], 5);
+    }
+
 }
