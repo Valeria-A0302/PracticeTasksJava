@@ -232,4 +232,12 @@ public class MyArraysTest {
         int[] array = new int[]{10, 9, 8, 7, 6, 5, 4};
         Assert.assertEquals(index(array, 7), 3);
     }
+
+    @Test
+    public static void testChange() {
+        int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        change(array);
+        Assert.assertEquals(array[0], 10);
+        Assert.assertEquals(array[9], 1);
+    }
 }

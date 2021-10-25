@@ -261,4 +261,24 @@ public class MyArrays {
         }
         return -1;
     }
+
+    public static void change(int[] array) {
+        int max = array[0];
+        int indexMax = 0;
+        int min = array[0];
+        int indexMin = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+                indexMax = i;
+            }
+            if (array[i] < min) {
+                min = array[i];
+                indexMin = i;
+            }
+        }
+        int change = array[indexMax];
+        array[indexMax] = array[indexMin];
+        array[indexMin] = change;
+    }
 }
