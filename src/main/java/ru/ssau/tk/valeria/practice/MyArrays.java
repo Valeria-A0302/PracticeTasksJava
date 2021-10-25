@@ -287,4 +287,12 @@ public class MyArrays {
             array[i] = ~array[i];
         }
     }
+
+    public static int[] bitwiseNegationTwo(int[] array) {
+        int[] arrayTwo = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            arrayTwo[i] = ~array[i];
+        }
+        return arrayTwo;
+    }
 }

@@ -259,4 +259,21 @@ public class MyArraysTest {
         Assert.assertEquals(array[4], 5);
     }
 
+    @Test
+    public static void testBitwiseNegationTwo() {
+        int[] array = new int[]{2, 3, 6, 8, 9, 10};
+        Assert.assertEquals(bitwiseNegationTwo(array)[0], -3);
+        Assert.assertEquals(bitwiseNegationTwo(array)[1], -4);
+        Assert.assertEquals(bitwiseNegationTwo(array)[2], -7);
+        Assert.assertEquals(bitwiseNegationTwo(array)[3], -9);
+        Assert.assertEquals(bitwiseNegationTwo(array)[4], -10);
+        Assert.assertEquals(bitwiseNegationTwo(array)[5], -11);
+
+        Assert.assertEquals(bitwiseNegationTwo(bitwiseNegationTwo(array))[0], 2);
+        Assert.assertEquals(bitwiseNegationTwo(bitwiseNegationTwo(array))[1], 3);
+        Assert.assertEquals(bitwiseNegationTwo(bitwiseNegationTwo(array))[2], 6);
+        Assert.assertEquals(bitwiseNegationTwo(bitwiseNegationTwo(array))[3], 8);
+        Assert.assertEquals(bitwiseNegationTwo(bitwiseNegationTwo(array))[4], 9);
+        Assert.assertEquals(bitwiseNegationTwo(bitwiseNegationTwo(array))[5], 10);
+    }
 }
