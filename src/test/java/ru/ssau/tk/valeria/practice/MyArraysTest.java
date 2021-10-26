@@ -276,4 +276,18 @@ public class MyArraysTest {
         Assert.assertEquals(bitwiseNegationTwo(bitwiseNegationTwo(array))[4], 9);
         Assert.assertEquals(bitwiseNegationTwo(bitwiseNegationTwo(array))[5], 10);
     }
+
+    @Test
+    public static void testSumOfArrayIndexes() {
+        int[] array = new int[]{12, 2, 14, 5, 16, 4};
+        Assert.assertEquals(sumOfArrayIndexes(array)[0], 14);
+        Assert.assertEquals(sumOfArrayIndexes(array)[1], 19);
+        Assert.assertEquals(sumOfArrayIndexes(array)[2], 20);
+
+        int[] newArray = new int[]{1, 23, 2, 3, 6};
+        Assert.assertEquals(sumOfArrayIndexes(newArray)[0], 24);
+        Assert.assertEquals(sumOfArrayIndexes(newArray)[1], 5);
+        Assert.assertEquals(sumOfArrayIndexes(newArray)[2], 6);
+
+    }
 }

@@ -295,4 +295,21 @@ public class MyArrays {
         }
         return arrayTwo;
     }
+
+    public static int[] sumOfArrayIndexes(int[] array) {
+        int[] arrayTwo;
+        if (array.length % 2 != 0) {
+            arrayTwo = new int[array.length / 2 + 1];
+            for (int i = 0; i < arrayTwo.length - 1; i++) {
+                arrayTwo[i] = array[i * 2] + array[i * 2 + 1];
+            }
+            arrayTwo[arrayTwo.length - 1] = array[array.length - 1];
+        } else {
+            arrayTwo = new int[array.length / 2];
+            for (int i = 0; i < arrayTwo.length; i++) {
+                arrayTwo[i] = array[i * 2] + array[i * 2 + 1];
+            }
+        }
+        return arrayTwo;
+    }
 }
