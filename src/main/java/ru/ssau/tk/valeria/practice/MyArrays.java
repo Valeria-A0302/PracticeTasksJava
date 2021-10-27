@@ -312,4 +312,12 @@ public class MyArrays {
         }
         return arrayTwo;
     }
+
+    public static boolean[] booleanArray(int[] array) {
+        boolean[] newArray = new boolean[array.length];
+        for (int element = 0; element < array.length; element++) {
+            newArray[element] = array[element] % 2 == 0;
+        }
+        return newArray;
+    }
 }

@@ -288,6 +288,17 @@ public class MyArraysTest {
         Assert.assertEquals(sumOfArrayIndexes(newArray)[0], 24);
         Assert.assertEquals(sumOfArrayIndexes(newArray)[1], 5);
         Assert.assertEquals(sumOfArrayIndexes(newArray)[2], 6);
+    }
 
+    @Test
+    public static void testBooleanArray() {
+        int[] array = new int[]{1, 2, 3, 4, 5, 6, 7};
+        Assert.assertFalse(booleanArray(array)[0]);
+        Assert.assertTrue(booleanArray(array)[1]);
+        Assert.assertFalse(booleanArray(array)[2]);
+        Assert.assertTrue(booleanArray(array)[3]);
+        Assert.assertFalse(booleanArray(array)[4]);
+        Assert.assertTrue(booleanArray(array)[5]);
+        Assert.assertFalse(booleanArray(array)[6]);
     }
 }
