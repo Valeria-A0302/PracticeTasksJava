@@ -301,4 +301,11 @@ public class MyArraysTest {
         Assert.assertTrue(booleanArray(array)[5]);
         Assert.assertFalse(booleanArray(array)[6]);
     }
+
+    @Test
+    public static void testNumberOfTwoBitNumbersAndTwoNumbersIntoOne() {
+        Assert.assertEquals(twoNumbersIntoOne(numberOfTwoBitNumbers(23215135125L)), 23215135125L);
+        Assert.assertEquals(twoNumbersIntoOne(numberOfTwoBitNumbers(545346236L)), 545346236L);
+        Assert.assertEquals(twoNumbersIntoOne(numberOfTwoBitNumbers(8476843L)), 8476843L);
+    }
 }

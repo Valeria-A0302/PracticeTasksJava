@@ -320,4 +320,12 @@ public class MyArrays {
         }
         return newArray;
     }
+
+    public static int[] numberOfTwoBitNumbers(long number) {
+        return new int[]{(int) (number >>> 32), (int) number};
+    }
+
+    public static long twoNumbersIntoOne(int[] twoNumbers) {
+        return ((long) twoNumbers[0] << 32) | twoNumbers[1];
+    }
 }
