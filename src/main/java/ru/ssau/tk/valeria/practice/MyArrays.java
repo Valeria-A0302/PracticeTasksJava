@@ -328,4 +328,16 @@ public class MyArrays {
     public static long twoNumbersIntoOne(int[] twoNumbers) {
         return ((long) twoNumbers[0] << 32) | twoNumbers[1];
     }
+
+    public static int[] strangeArray(int length, int index) {
+        int[] array = new int[length];
+        for (int element = 0; element < array.length; element++) {
+            array[element] = index;
+            if (index > length) {
+                array[element] = index - length;
+            }
+            index++;
+        }
+        return array;
+    }
 }

@@ -308,4 +308,11 @@ public class MyArraysTest {
         Assert.assertEquals(twoNumbersIntoOne(numberOfTwoBitNumbers(545346236L)), 545346236L);
         Assert.assertEquals(twoNumbersIntoOne(numberOfTwoBitNumbers(8476843L)), 8476843L);
     }
+
+    @Test
+    public static void testStrangeArray() {
+        Assert.assertEquals(strangeArray(5, 3), new int[]{3, 4, 5, 1, 2});
+        Assert.assertEquals(strangeArray(10, 7), new int[]{7, 8, 9, 10, 1, 2, 3, 4, 5, 6});
+        Assert.assertEquals(strangeArray(8, 6), new int[]{6, 7, 8, 1, 2, 3, 4, 5});
+    }
 }
