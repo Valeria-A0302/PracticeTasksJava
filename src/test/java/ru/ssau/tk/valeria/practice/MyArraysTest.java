@@ -315,4 +315,11 @@ public class MyArraysTest {
         Assert.assertEquals(strangeArray(10, 7), new int[]{7, 8, 9, 10, 1, 2, 3, 4, 5, 6});
         Assert.assertEquals(strangeArray(8, 6), new int[]{6, 7, 8, 1, 2, 3, 4, 5});
     }
+
+    @Test
+    public static void testDynamicArray() {
+        Assert.assertEquals(dynamicArray(3)[0], new int[]{1, 2, 3});
+        Assert.assertEquals(dynamicArray(3)[1], new int[]{4, 5});
+        Assert.assertEquals(dynamicArray(3)[2], new int[]{6});
+    }
 }

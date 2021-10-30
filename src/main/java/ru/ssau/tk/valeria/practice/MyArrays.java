@@ -340,4 +340,17 @@ public class MyArrays {
         }
         return array;
     }
+
+    public static int[][] dynamicArray(int dimension) {
+        int[][] array = new int[dimension][];
+        int number = 1;
+        for (int element = 0; element < dimension; element++) {
+            array[element] = new int[dimension - element];
+            for (int index = 0; index < (dimension - element); index++) {
+                array[element][index] = number;
+                number++;
+            }
+        }
+        return array;
+    }
 }
