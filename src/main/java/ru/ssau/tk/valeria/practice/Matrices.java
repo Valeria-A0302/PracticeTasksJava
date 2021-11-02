@@ -31,4 +31,15 @@ public class Matrices {
         }
         return multiplication;
     }
+
+    public static Matrix multiplicationByNumber(Matrix matrixOne, double number) {
+        Matrix multiplication = new Matrix(matrixOne.getColumns(), matrixOne.getLines());
+        for (int column = 0; column < multiplication.getColumns(); column++) {
+            for (int line = 0; line < multiplication.getLines(); line++) {
+                double element = matrixOne.getAt(column, line) * number;
+                multiplication.setAt(column, line, element);
+            }
+        }
+        return multiplication;
+    }
 }

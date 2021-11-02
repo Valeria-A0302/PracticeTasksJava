@@ -77,4 +77,15 @@ public class MatricesTest {
         Assert.assertEquals(multiplicationTwo.getAt(1, 1), 15.0);
     }
 
+    @Test
+    public static void testMultiplicationByNumber() {
+        Matrix matrix = new Matrix(2, 1);
+        matrix.setAt(0, 0, 1);
+        matrix.setAt(1, 0, 1);
+
+        Matrix multiplicationWithNumber = Matrices.multiplicationByNumber(matrix, 5.0);
+        Assert.assertEquals(multiplicationWithNumber.getAt(0, 0), 5.0);
+        Assert.assertEquals(multiplicationWithNumber.getAt(1, 0), 5.0);
+    }
+
 }
