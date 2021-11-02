@@ -14,4 +14,21 @@ public class Matrices {
         }
         return sum;
     }
+
+    public static Matrix matrixMultiplication(Matrix matrixOne, Matrix matrixTwo) {
+        if (matrixOne.getLines() != matrixTwo.getColumns()) {
+            return null;
+        }
+        Matrix multiplication = new Matrix(matrixOne.getLines(), matrixTwo.getColumns());
+        for (int line = 0; line < multiplication.getLines(); line++) {
+            for (int column = 0; column < multiplication.getColumns(); column++) {
+                double newElement = 0;
+                for (int element = 0; element < matrixTwo.getLines(); element++) {
+                    newElement += matrixOne.getAt(element, line) * matrixTwo.getAt(column, element);
+                    multiplication.setAt(column, line, newElement);
+                }
+            }
+        }
+        return multiplication;
+    }
 }
