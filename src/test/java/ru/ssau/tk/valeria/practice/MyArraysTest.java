@@ -322,4 +322,15 @@ public class MyArraysTest {
         Assert.assertEquals(dynamicArray(3)[1], new int[]{4, 5});
         Assert.assertEquals(dynamicArray(3)[2], new int[]{6});
     }
+
+    @Test
+    public static void testSortedArray() {
+        double[] array = new double[]{1.0, Double.NaN, 3.3, 0.1, 123.8, 5.1};
+        sortedArray(array);
+        Assert.assertEquals(array, new double[]{1.0, Double.NaN, 3.3, 0.1, 123.8, 5.1});
+
+        double[] arrayTwo = new double[]{5.4, 3.6, 7.8, 23.4, 6.0, 1.2};
+        sortedArray(arrayTwo);
+        Assert.assertEquals(arrayTwo, new double[]{1.2, 3.6, 5.4, 6.0, 7.8, 23.4});
+    }
 }

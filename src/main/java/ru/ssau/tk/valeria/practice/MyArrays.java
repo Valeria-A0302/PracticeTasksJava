@@ -353,4 +353,13 @@ public class MyArrays {
         }
         return array;
     }
+
+    public static void sortedArray(double[] array) {
+        for (double v : array) {
+            if (Double.isNaN(v)) {
+                return;
+            }
+        }
+        Arrays.sort(array);
+    }
 }
