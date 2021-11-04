@@ -375,4 +375,14 @@ public class MyArrays {
         printArray(array);
         System.out.println(Arrays.toString(array));
     }
+
+    public static double multiplicationOfArrayElements(double[] array) {
+        double multiplication = 1.0;
+        for (double i : array) {
+            if (!Double.isNaN(i) && i != Double.POSITIVE_INFINITY && i != Double.NEGATIVE_INFINITY) {
+                multiplication *= i;
+            }
+        }
+        return multiplication;
+    }
 }

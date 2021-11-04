@@ -333,4 +333,10 @@ public class MyArraysTest {
         sortedArray(arrayTwo);
         Assert.assertEquals(arrayTwo, new double[]{1.2, 3.6, 5.4, 6.0, 7.8, 23.4});
     }
+
+    @Test
+    public static void testMultiplicationOfArrayElements() {
+        double[] array = new double[]{1.0, Double.NaN, 3.3, 0.1, 1.8, 5.0, Double.NEGATIVE_INFINITY, 4.0, 8.1, Double.POSITIVE_INFINITY};
+        Assert.assertEquals(multiplicationOfArrayElements(array), 96, 228);
+    }
 }
