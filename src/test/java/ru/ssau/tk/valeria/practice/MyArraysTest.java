@@ -339,4 +339,10 @@ public class MyArraysTest {
         double[] array = new double[]{1.0, Double.NaN, 3.3, 0.1, 1.8, 5.0, Double.NEGATIVE_INFINITY, 4.0, 8.1, Double.POSITIVE_INFINITY};
         Assert.assertEquals(multiplicationOfArrayElements(array), 96, 228);
     }
+
+    @Test
+    public static void testHexadecimalNumbers() {
+        int[] array = new int[]{-1, 0, 1, 2, 3, 4, 5};
+        hexadecimalNumbers(array);
+    }
 }

@@ -385,4 +385,12 @@ public class MyArrays {
         }
         return multiplication;
     }
+
+    public static void hexadecimalNumbers(int[] array) {
+        Integer[] newArray = new Integer[array.length];
+        for (int element = 0; element < array.length; element++) {
+            newArray[element] = array[element];
+        }
+        Arrays.stream(newArray).forEach(element -> System.out.println(Integer.toHexString(element)));
+    }
 }
