@@ -18,7 +18,11 @@ public class MyLines {
     public static void comparison() {
         String stringOne = "Hello!";
         String stringTwo = new String(stringOne);
-        System.out.println(stringOne == stringTwo);
         System.out.println(stringTwo.equals(stringOne));
+    }
+
+    public static boolean palindrome(String string) {
+        String newString = new String(new StringBuilder(string).reverse());
+        return string.equals(newString);
     }
 }

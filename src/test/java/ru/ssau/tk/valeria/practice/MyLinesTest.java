@@ -1,5 +1,6 @@
 package ru.ssau.tk.valeria.practice;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MyLinesTest {
@@ -21,5 +22,14 @@ public class MyLinesTest {
     @Test
     public static void testComparison() {
         MyLines.comparison();
+    }
+
+    @Test
+    public static void testPalindrome() {
+        String string = "123321";
+        Assert.assertTrue(MyLines.palindrome(string));
+
+        String newString = "123456";
+        Assert.assertFalse(MyLines.palindrome(newString));
     }
 }
