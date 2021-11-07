@@ -25,4 +25,11 @@ public class MyLines {
         String newString = new String(new StringBuilder(string).reverse());
         return string.equals(newString);
     }
+
+    public static boolean stringComparison(String stringOne, String stringTwo) {
+        if (stringOne == null || stringTwo == null) {
+            return false;
+        }
+        return !stringOne.equals(stringTwo) && !stringOne.equalsIgnoreCase(stringTwo);
+    }
 }

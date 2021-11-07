@@ -32,4 +32,15 @@ public class MyLinesTest {
         String newString = "123456";
         Assert.assertFalse(MyLines.palindrome(newString));
     }
+
+    @Test
+    public static void testStringComparison() {
+        String stringOne = "hello";
+        String stringTwo = "WORLD";
+        Assert.assertTrue(MyLines.stringComparison(stringOne, stringTwo));
+        Assert.assertFalse(MyLines.stringComparison(null, stringTwo));
+        Assert.assertFalse(MyLines.stringComparison(null, null));
+        Assert.assertFalse(MyLines.stringComparison(stringOne, "HELLO"));
+        Assert.assertFalse(MyLines.stringComparison(stringOne, "hello"));
+    }
 }
