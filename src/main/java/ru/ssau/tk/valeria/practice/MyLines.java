@@ -14,4 +14,11 @@ public class MyLines {
             System.out.println(i);
         }
     }
+
+    public static void comparison() {
+        String stringOne = "Hello!";
+        String stringTwo = new String(stringOne);
+        System.out.println(stringOne == stringTwo);
+        System.out.println(stringTwo.equals(stringOne));
+    }
 }
