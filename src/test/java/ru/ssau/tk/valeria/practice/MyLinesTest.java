@@ -9,4 +9,12 @@ public class MyLinesTest {
         MyLines.stringCharacter(string);
     }
 
+    @Test
+    public static void testStringOfBytes() {
+        String string = "Hello, world!";
+        MyLines.stringOfBytes(string);
+        System.out.println();
+        String newString = "Привет, мир!";
+        MyLines.stringOfBytes(newString);
+    }
 }

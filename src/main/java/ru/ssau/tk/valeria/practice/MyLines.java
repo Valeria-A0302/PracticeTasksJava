@@ -7,4 +7,11 @@ public class MyLines {
             System.out.println(string.charAt(element));
         }
     }
+
+    public static void stringOfBytes(String string) {
+        byte[] newString = string.getBytes();
+        for (int i : newString) {
+            System.out.println(i);
+        }
+    }
 }
