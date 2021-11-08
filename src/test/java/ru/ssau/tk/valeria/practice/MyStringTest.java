@@ -62,4 +62,11 @@ public class MyStringTest {
         Assert.assertEquals(MyString.indexOfStringTwo("12345343534", "34"), 5);
         Assert.assertEquals(MyString.indexOfStringTwo("345121212", "45"), -1);
     }
+
+    @Test
+    public static void testLastIndexOfString() {
+        Assert.assertEquals(MyString.lastIndexOfString("солнышко", "ко"), 6);
+        Assert.assertEquals(MyString.lastIndexOfString("12345343534", "35"), 7);
+        Assert.assertEquals(MyString.lastIndexOfString("345121212", "99"), -1);
+    }
 }

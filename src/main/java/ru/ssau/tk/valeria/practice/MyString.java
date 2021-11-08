@@ -49,4 +49,8 @@ public class MyString {
     public static int indexOfStringTwo(String stringOne, String stringTwo) {
         return stringOne.indexOf(stringTwo, stringOne.length() / 2);
     }
+
+    public static int lastIndexOfString(String stringOne, String stringTwo) {
+        return stringOne.indexOf(stringTwo);
+    }
 }
