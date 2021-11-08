@@ -48,4 +48,11 @@ public class MyStringTest {
     public static void testScreening() {
         MyString.screening();
     }
+
+    @Test
+    public static void testIndexOfString() {
+        Assert.assertEquals(MyString.indexOfString("понимать", "мать"), 4);
+        Assert.assertEquals(MyString.indexOfString("абракадабра", "бра"), 1);
+        Assert.assertEquals(MyString.indexOfString("абракадабра", "бам"), -1);
+    }
 }

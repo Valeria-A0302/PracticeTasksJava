@@ -17,8 +17,7 @@ public class MyString {
 
     public static void comparison() {
         String stringOne = "Hello!";
-        String stringTwo = new String(stringOne);
-        System.out.println(stringTwo.equals(stringOne));
+        System.out.println(stringOne);
     }
 
     public static boolean palindrome(String string) {
@@ -39,8 +38,11 @@ public class MyString {
         System.out.println("Символ\b№" + ++i);
         System.out.println("Символ\n№" + ++i);
         System.out.println("Символ\r№" + ++i);
-        System.out.println("Символ\'№" + ++i);
         System.out.println("Символ\"№" + ++i);
         System.out.println("Символ\\№" + ++i);
+    }
+
+    public static int indexOfString(String stringOne, String stringTwo) {
+        return stringOne.indexOf(stringTwo);
     }
 }
