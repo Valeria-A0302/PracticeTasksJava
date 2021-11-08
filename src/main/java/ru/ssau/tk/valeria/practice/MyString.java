@@ -1,6 +1,6 @@
 package ru.ssau.tk.valeria.practice;
 
-public class MyLines {
+public class MyString {
 
     public static void stringCharacter(String string) {
         for (int element = 0; element < string.length(); element++) {
@@ -31,5 +31,16 @@ public class MyLines {
             return false;
         }
         return !stringOne.equals(stringTwo) && !stringOne.equalsIgnoreCase(stringTwo);
+    }
+
+    public static void screening() {
+        int i = 0;
+        System.out.println("Символ\t№" + ++i);
+        System.out.println("Символ\b№" + ++i);
+        System.out.println("Символ\n№" + ++i);
+        System.out.println("Символ\r№" + ++i);
+        System.out.println("Символ\'№" + ++i);
+        System.out.println("Символ\"№" + ++i);
+        System.out.println("Символ\\№" + ++i);
     }
 }
