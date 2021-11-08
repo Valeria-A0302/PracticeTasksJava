@@ -53,4 +53,14 @@ public class MyString {
     public static int lastIndexOfString(String stringOne, String stringTwo) {
         return stringOne.indexOf(stringTwo);
     }
+
+    public static int postfixAndPrefix(String[] string, String prefix, String postfix) {
+        int count = 0;
+        for (String element : string) {
+            if (element.startsWith(prefix) && element.endsWith(postfix)) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
