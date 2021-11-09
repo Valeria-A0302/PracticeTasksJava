@@ -63,4 +63,16 @@ public class MyString {
         }
         return count;
     }
+
+    public static int numberOfRows(String[] string, String prefix, String postfix) {
+        int count = 0;
+        String element;
+        for (String index : string) {
+            element = index.trim();
+            if (element.startsWith(prefix) && element.endsWith(postfix)) {
+                count++;
+            }
+        }
+        return count;
+    }
 }

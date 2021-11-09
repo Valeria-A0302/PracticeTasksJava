@@ -77,4 +77,10 @@ public class MyStringTest {
         string = new String[]{"abcdf", "adref", "antjkf", "dsgbf"};
         Assert.assertEquals(MyString.postfixAndPrefix(string, "a", "f"), 3);
     }
+
+    @Test
+    public static void testNumberOfRows() {
+        String[] string = new String[]{"     1237653425    ", "   98534575  ", "  1366475  "};
+        Assert.assertEquals(MyString.numberOfRows(string, "1", "5"), 2);
+    }
 }
