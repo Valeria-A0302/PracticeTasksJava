@@ -66,4 +66,9 @@ public class Person {
     int getPassportId() {
         return passportId;
     }
+
+    @Override
+    public String toString() {
+        return "Это " + firstName + " " + lastName;
+    }
 }

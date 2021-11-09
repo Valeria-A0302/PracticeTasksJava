@@ -64,4 +64,10 @@ public class PersonTest {
         Assert.assertEquals(person.getPassportId(), 1234);
         Assert.assertEquals(person.getGender(), Gender.FEMALE);
     }
+
+    @Test
+    public static void testToString() {
+        Person person = new Person("Valeria", "Atapina");
+        Assert.assertEquals(person.toString(), "Это Valeria Atapina");
+    }
 }
