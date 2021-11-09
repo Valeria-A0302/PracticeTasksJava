@@ -84,4 +84,17 @@ public class MyString {
         }
         return stringOne;
     }
+
+    public static String substring(String string, int from, int to) {
+        if (from < 0) {
+            from = 0;
+        }
+        if (to > string.length()) {
+            to = string.length();
+        }
+        if (to <= from) {
+            return "";
+        }
+        return string.substring(from, to);
+    }
 }
