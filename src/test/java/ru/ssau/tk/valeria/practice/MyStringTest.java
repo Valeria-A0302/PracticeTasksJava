@@ -83,4 +83,10 @@ public class MyStringTest {
         String[] string = new String[]{"     1237653425    ", "   98534575  ", "  1366475  "};
         Assert.assertEquals(MyString.numberOfRows(string, "1", "5"), 2);
     }
+
+    @Test
+    public static void testReplacingString() {
+        Assert.assertEquals(MyString.replacingString("ороророро", "оро", "ро"), "роррро");
+        Assert.assertEquals(MyString.replacingString("гиппопотам", "по", "тук"), "гиптуктуктам");
+    }
 }

@@ -75,4 +75,13 @@ public class MyString {
         }
         return count;
     }
+
+    public static String replacingString(String stringOne, String stringTwo, String stringThree) {
+        for (int i = 0; i < 10; i++) {
+            if (stringOne.contains(stringTwo)) {
+                stringOne = stringOne.replaceAll(stringTwo, stringThree);
+            }
+        }
+        return stringOne;
+    }
 }
