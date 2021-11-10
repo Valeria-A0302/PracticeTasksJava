@@ -26,4 +26,16 @@ public class Matrix {
     public int getLines() {
         return lines;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder string = new StringBuilder();
+        for (int i = 0; i < columns; i++) {
+            for (int j = 0; j < lines; j++) {
+                string.append(getAt(i, j)).append(",");
+            }
+            string.append(";\n");
+        }
+        return string.toString();
+    }
 }
