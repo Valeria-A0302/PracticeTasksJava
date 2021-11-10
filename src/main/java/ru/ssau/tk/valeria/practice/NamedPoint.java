@@ -45,4 +45,12 @@ public class NamedPoint extends Point implements Resettable {
         super(0.0, 0.0, 0.0);
         this.name = "Origin";
     }
+
+    @Override
+    public String toString() {
+        if (name == null) {
+            return super.toString();
+        }
+        return name + " " + super.toString();
+    }
 }
