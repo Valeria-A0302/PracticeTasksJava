@@ -97,4 +97,9 @@ public class MyString {
         }
         return string.substring(from, to);
     }
+
+    public static void printObject(Object object) {
+        System.out.println("Описание объекта: ");
+        System.out.println(object);
+    }
 }
