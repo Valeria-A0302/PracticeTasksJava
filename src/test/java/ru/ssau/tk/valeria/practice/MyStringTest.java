@@ -114,4 +114,9 @@ public class MyStringTest {
         MyString.printObject(namedPoint);
         MyString.printObject(matrix);
     }
+
+    @Test
+    public static void testArrayString() {
+        Assert.assertEquals(MyString.arrayString("rtrta a  sgafg aetag"), new String[]{"Rtrta", "A", "", "Sgafg", "Aetag"});
+    }
 }

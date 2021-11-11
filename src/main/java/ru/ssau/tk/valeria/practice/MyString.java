@@ -102,4 +102,15 @@ public class MyString {
         System.out.println("Описание объекта: ");
         System.out.println(object);
     }
+
+    public static String[] arrayString(String string) {
+        String[] array = string.split(" ");
+        for (int s = 0; s < array.length; s++) {
+            if (array[s].equals("")) {
+                continue;
+            }
+            array[s] = array[s].substring(0, 1).toUpperCase() + array[s].substring(1);
+        }
+        return array;
+    }
 }
