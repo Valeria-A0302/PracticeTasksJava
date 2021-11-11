@@ -119,4 +119,10 @@ public class MyStringTest {
     public static void testArrayString() {
         Assert.assertEquals(MyString.arrayString("rtrta a  sgafg aetag"), new String[]{"Rtrta", "A", "", "Sgafg", "Aetag"});
     }
+
+    @Test
+    public static void testFromArrayToString() {
+        String[] array = new String[]{"gdag", "argarg", "adaerh"};
+        Assert.assertEquals(MyString.fromArrayToString(array), "gdag, argarg, adaerh");
+    }
 }

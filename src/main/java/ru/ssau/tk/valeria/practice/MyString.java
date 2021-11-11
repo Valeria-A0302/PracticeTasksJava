@@ -1,5 +1,7 @@
 package ru.ssau.tk.valeria.practice;
 
+import static java.lang.String.join;
+
 public class MyString {
 
     public static void stringCharacter(String string) {
@@ -112,5 +114,9 @@ public class MyString {
             array[s] = array[s].substring(0, 1).toUpperCase() + array[s].substring(1);
         }
         return array;
+    }
+
+    public static String fromArrayToString(String[] array) {
+        return join(", ", array);
     }
 }
