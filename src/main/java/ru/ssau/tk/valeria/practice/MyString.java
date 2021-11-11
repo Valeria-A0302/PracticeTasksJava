@@ -119,4 +119,15 @@ public class MyString {
     public static String fromArrayToString(String[] array) {
         return join(", ", array);
     }
+
+    public static String replacingCharacterWithIndex(String string) {
+        StringBuilder stringOne = new StringBuilder(string);
+        for (int element = 0; element < stringOne.length(); element++) {
+            if (element % 2 == 0) {
+                stringOne.replace(element, element + 1, Integer.toString(element));
+            }
+        }
+        stringOne.reverse();
+        return stringOne.toString();
+    }
 }

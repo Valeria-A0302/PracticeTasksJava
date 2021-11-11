@@ -125,4 +125,9 @@ public class MyStringTest {
         String[] array = new String[]{"gdag", "argarg", "adaerh"};
         Assert.assertEquals(MyString.fromArrayToString(array), "gdag, argarg, adaerh");
     }
+
+    @Test
+    public static void testReplacingCharacterWithIndex() {
+        Assert.assertEquals(MyString.replacingCharacterWithIndex("абракадабра"), "01р8а6а4а2б0");
+    }
 }
