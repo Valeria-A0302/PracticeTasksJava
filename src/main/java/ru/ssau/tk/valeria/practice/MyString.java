@@ -144,4 +144,9 @@ public class MyString {
     public static void defaultEncoding() {
         System.out.println(Charset.defaultCharset());
     }
+
+    public static String encodings(String stringOne, Charset encodingOne, Charset encodingTwo) {
+        byte[] stringTwo = stringOne.getBytes(encodingOne);
+        return new String(stringTwo, encodingTwo);
+    }
 }
