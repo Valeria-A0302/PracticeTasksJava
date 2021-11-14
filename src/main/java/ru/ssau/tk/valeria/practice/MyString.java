@@ -1,5 +1,7 @@
 package ru.ssau.tk.valeria.practice;
 
+import java.nio.charset.Charset;
+
 import static java.lang.String.join;
 
 public class MyString {
@@ -137,5 +139,9 @@ public class MyString {
             string.append(element).append(" ");
         }
         return string.toString();
+    }
+
+    public static void defaultEncoding() {
+        System.out.println(Charset.defaultCharset());
     }
 }
