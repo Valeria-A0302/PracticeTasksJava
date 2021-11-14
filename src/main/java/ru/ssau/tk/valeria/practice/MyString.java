@@ -130,4 +130,12 @@ public class MyString {
         stringOne.reverse();
         return stringOne.toString();
     }
+
+    public static String stringOfNumbers(int number) {
+        StringBuilder string = new StringBuilder();
+        for (int element = 0; element < number; element++) {
+            string.append(element).append(" ");
+        }
+        return string.toString();
+    }
 }
