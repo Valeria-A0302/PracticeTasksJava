@@ -29,4 +29,11 @@ public class MyExceptionsTest {
         Assert.assertThrows(ArrayIndexOutOfBoundsException.class, () -> System.out.println(MyExceptions.positionOfCharacter(strings, 10, 2)));
         Assert.assertThrows(StringIndexOutOfBoundsException.class, () -> System.out.println(MyExceptions.positionOfCharacter(strings, 1, 12)));
     }
+
+    @Test
+    public static void testConvertingStringToInteger() {
+        Assert.assertEquals(MyExceptions.convertingStringToInteger("6", "2"), 3);
+        Assert.assertThrows(NumberFormatException.class, () -> System.out.println(MyExceptions.convertingStringToInteger("f", "1")));
+        Assert.assertThrows(ArithmeticException.class, () -> System.out.println(MyExceptions.convertingStringToInteger("6", "0")));
+    }
 }

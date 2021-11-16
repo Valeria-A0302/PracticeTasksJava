@@ -16,4 +16,8 @@ public class MyExceptions {
     public static char positionOfCharacter(String[] string, int m, int n) {
         return string[m].charAt(n);
     }
+
+    public static int convertingStringToInteger(String stringOne, String stringTwo) {
+        return Integer.parseInt(stringOne) / Integer.parseInt(stringTwo);
+    }
 }
