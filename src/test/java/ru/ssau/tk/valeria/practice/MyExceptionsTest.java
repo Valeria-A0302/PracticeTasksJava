@@ -10,4 +10,16 @@ public class MyExceptionsTest {
         Assert.assertEquals(MyExceptions.exceptionForPerson(person), "Это Атапина Валерия");
         Assert.assertThrows(NullPointerException.class, () -> MyExceptions.exceptionForPerson(null));
     }
+
+    @Test
+    public static void testArrayOfCharacters() {
+        String[] strings = new String[]{"яблоко", "лёд", "груша"};
+        Assert.assertEquals(MyExceptions.arrayOfCharacters(strings, 2), new char[]{'л', 'д', 'у'});
+        Assert.assertEquals(MyExceptions.arrayOfCharacters(strings, 1), new char[]{'б', 'ё', 'р'});
+        Assert.assertThrows(NullPointerException.class, () -> System.out.println(MyExceptions.arrayOfCharacters(null, 1)));
+        Assert.assertThrows(NullPointerException.class, () -> System.out.println(MyExceptions.arrayOfCharacters(new String[]{"asdad", null, "dada"}, 4)));
+        Assert.assertThrows(StringIndexOutOfBoundsException.class, () -> System.out.println(MyExceptions.arrayOfCharacters(new String[]{"asdad", null, "dada"}, -5)));
+        Assert.assertThrows(StringIndexOutOfBoundsException.class, () -> System.out.println(MyExceptions.arrayOfCharacters(new String[]{"asdad", null, "dada"}, 10)));
+
+    }
 }
