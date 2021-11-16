@@ -12,4 +12,8 @@ public class MyExceptions {
         }
         return array;
     }
+
+    public static char positionOfCharacter(String[] string, int m, int n) {
+        return string[m].charAt(n);
+    }
 }

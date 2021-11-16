@@ -20,6 +20,13 @@ public class MyExceptionsTest {
         Assert.assertThrows(NullPointerException.class, () -> System.out.println(MyExceptions.arrayOfCharacters(new String[]{"asdad", null, "dada"}, 4)));
         Assert.assertThrows(StringIndexOutOfBoundsException.class, () -> System.out.println(MyExceptions.arrayOfCharacters(new String[]{"asdad", null, "dada"}, -5)));
         Assert.assertThrows(StringIndexOutOfBoundsException.class, () -> System.out.println(MyExceptions.arrayOfCharacters(new String[]{"asdad", null, "dada"}, 10)));
+    }
 
+    @Test
+    public static void testPositionOfCharacter() {
+        String[] strings = new String[]{"яблоко", "лёд", "груша"};
+        Assert.assertEquals(MyExceptions.positionOfCharacter(strings, 1, 2), 'д');
+        Assert.assertThrows(ArrayIndexOutOfBoundsException.class, () -> System.out.println(MyExceptions.positionOfCharacter(strings, 10, 2)));
+        Assert.assertThrows(StringIndexOutOfBoundsException.class, () -> System.out.println(MyExceptions.positionOfCharacter(strings, 1, 12)));
     }
 }
