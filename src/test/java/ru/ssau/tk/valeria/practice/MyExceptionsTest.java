@@ -3,6 +3,8 @@ package ru.ssau.tk.valeria.practice;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.*;
+
 public class MyExceptionsTest {
     @Test
     public static void testExceptionForPerson() {
@@ -35,5 +37,12 @@ public class MyExceptionsTest {
         Assert.assertEquals(MyExceptions.convertingStringToInteger("6", "2"), 3);
         Assert.assertThrows(NumberFormatException.class, () -> System.out.println(MyExceptions.convertingStringToInteger("f", "1")));
         Assert.assertThrows(ArithmeticException.class, () -> System.out.println(MyExceptions.convertingStringToInteger("6", "0")));
+    }
+
+    @Test
+    public static void testSerializeForPerson() {
+        Assert.assertThrows(NotSerializableException.class, () -> MyExceptions.serializeForPerson(new ByteArrayOutputStream(), new Object()));
+        Assert.assertThrows(FileNotFoundException.class, () -> MyExceptions.serializeForPerson(new FileOutputStream(""), new Object()));
+        Assert.assertThrows(FileNotFoundException.class, () -> MyExceptions.serializeForPerson(new FileOutputStream(""), new Person()));
     }
 }

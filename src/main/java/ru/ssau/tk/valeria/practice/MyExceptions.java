@@ -1,5 +1,9 @@
 package ru.ssau.tk.valeria.practice;
 
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+
 public class MyExceptions {
     public static String exceptionForPerson(Person person) {
         return person.toString();
@@ -19,5 +23,10 @@ public class MyExceptions {
 
     public static int convertingStringToInteger(String stringOne, String stringTwo) {
         return Integer.parseInt(stringOne) / Integer.parseInt(stringTwo);
+    }
+
+    public static void serializeForPerson(OutputStream outputStream, Object object) throws IOException {
+        ObjectOutputStream objectStream = new ObjectOutputStream(outputStream);
+        objectStream.writeObject(object);
     }
 }
