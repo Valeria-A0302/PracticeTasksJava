@@ -3,7 +3,12 @@ package ru.ssau.tk.valeria.practice;
 public class Matrices {
     public static Matrix sumOfMatrices(Matrix matrixOne, Matrix matrixTwo) {
         if (matrixOne.getColumns() != matrixTwo.getColumns() || matrixOne.getLines() != matrixTwo.getLines()) {
-            return null;
+            if (matrixOne.getColumns() != matrixTwo.getColumns()) {
+                throw new IncompatibleDimensionsException("Несовместимые размеры столбцов!");
+            }
+            if (matrixOne.getLines() != matrixTwo.getLines()) {
+                throw new IncompatibleDimensionsException("Несовместимые размеры строк!");
+            }
         }
         Matrix sum = new Matrix(matrixOne.getColumns(), matrixTwo.getLines());
         for (int column = 0; column < sum.getColumns(); column++) {
@@ -17,7 +22,7 @@ public class Matrices {
 
     public static Matrix matrixMultiplication(Matrix matrixOne, Matrix matrixTwo) {
         if (matrixOne.getLines() != matrixTwo.getColumns()) {
-            return null;
+            throw new IncompatibleDimensionsException("Размеры строк первой матрицы не совпадают с размерами столбцов второй матрицы!");
         }
         Matrix multiplication = new Matrix(matrixOne.getLines(), matrixTwo.getColumns());
         for (int line = 0; line < multiplication.getLines(); line++) {

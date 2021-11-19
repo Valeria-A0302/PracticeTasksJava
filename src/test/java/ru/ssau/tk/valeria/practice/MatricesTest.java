@@ -23,7 +23,9 @@ public class MatricesTest {
         matrixTwo.setAt(2, 1, 7);
 
         Matrix sum = Matrices.sumOfMatrices(matrixOne, matrixTwo);
-        assert sum != null;
+        Matrix matrixThree = new Matrix(2, 3);
+        Matrix matrixFour = new Matrix(3, 2);
+        Assert.assertThrows(IncompatibleDimensionsException.class, () -> Matrices.sumOfMatrices(matrixThree, matrixFour));
         Assert.assertEquals(sum.getAt(0, 0), 4.0);
         Assert.assertEquals(sum.getAt(0, 1), 6.0);
         Assert.assertEquals(sum.getAt(1, 0), 7.0);
@@ -47,11 +49,14 @@ public class MatricesTest {
         matrixTwo.setAt(1, 1, 1);
 
         Matrix multiplication = Matrices.matrixMultiplication(matrixOne, matrixTwo);
-        assert multiplication != null;
         Assert.assertEquals(multiplication.getAt(0, 0), 5.0);
         Assert.assertEquals(multiplication.getAt(1, 0), 7.0);
         Assert.assertEquals(multiplication.getAt(0, 1), 7.0);
         Assert.assertEquals(multiplication.getAt(1, 1), 10.0);
+
+        Matrix anotherMatrixOne = new Matrix(2, 3);
+        Matrix anotherMatrixTwo = new Matrix(2, 3);
+        Assert.assertThrows(IncompatibleDimensionsException.class, () -> Matrices.matrixMultiplication(anotherMatrixOne, anotherMatrixTwo));
 
         Matrix firstMatrix = new Matrix(2, 3);
         firstMatrix.setAt(0, 0, 2);
@@ -70,7 +75,6 @@ public class MatricesTest {
         secondMatrix.setAt(2, 1, 1);
 
         Matrix multiplicationTwo = Matrices.matrixMultiplication(firstMatrix, secondMatrix);
-        assert multiplicationTwo != null;
         Assert.assertEquals(multiplicationTwo.getAt(0, 0), 7.0);
         Assert.assertEquals(multiplicationTwo.getAt(0, 1), 15.0);
         Assert.assertEquals(multiplicationTwo.getAt(1, 0), 8.0);
