@@ -45,4 +45,13 @@ public class MyExceptionsTest {
         Assert.assertThrows(FileNotFoundException.class, () -> MyExceptions.serializeForPerson(new FileOutputStream(""), new Object()));
         Assert.assertThrows(FileNotFoundException.class, () -> MyExceptions.serializeForPerson(new FileOutputStream(""), new Person()));
     }
+
+    @Test
+    public static void testCheckingMethod() {
+        try {
+            MyExceptions.checkingMethod();
+        } catch (SecondExceptionClass secondExceptionClass) {
+            Assert.assertTrue(secondExceptionClass.getCause() instanceof FirstExceptionClass);
+        }
+    }
 }

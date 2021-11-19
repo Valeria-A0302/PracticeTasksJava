@@ -29,4 +29,16 @@ public class MyExceptions {
         ObjectOutputStream objectStream = new ObjectOutputStream(outputStream);
         objectStream.writeObject(object);
     }
+
+    public static void checkingFirstException() throws FirstExceptionClass {
+        throw new FirstExceptionClass();
+    }
+
+    public static void checkingMethod() {
+        try {
+            checkingFirstException();
+        } catch (FirstExceptionClass firstExceptionClass) {
+            throw new SecondExceptionClass(firstExceptionClass);
+        }
+    }
 }
