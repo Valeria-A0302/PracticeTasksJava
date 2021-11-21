@@ -14,7 +14,7 @@ public class Route {
         locations.add(newLocation);
     }
 
-    public void addNewLocation(Location newLocation, int index) {
+    public void addNewLocation(int index, Location newLocation) {
         locations.add(index, newLocation);
     }
 
