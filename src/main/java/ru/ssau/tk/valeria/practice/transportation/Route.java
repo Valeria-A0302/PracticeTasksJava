@@ -3,6 +3,7 @@ package ru.ssau.tk.valeria.practice.transportation;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Objects;
 
 public class Route implements Iterable<Location> {
     private final List<Location> locations = new ArrayList<>();
@@ -50,5 +51,14 @@ public class Route implements Iterable<Location> {
                 }
             }
         };
+    }
+
+    public void remove(Location location) {
+        for (int index = 0; index < getLocations().size(); index++) {
+            if (getLocations().get(index) == location) {
+                removeLocation(index);
+                break;
+            }
+        }
     }
 }
