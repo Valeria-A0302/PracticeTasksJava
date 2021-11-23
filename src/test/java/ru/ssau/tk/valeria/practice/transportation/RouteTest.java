@@ -151,4 +151,42 @@ public class RouteTest {
 
         Assert.assertEquals(route.getLocations(), locations);
     }
+
+    @Test
+    public static void testEquals() {
+        Route routeOne = new Route();
+        Route routeTwo = new Route();
+        Location city = new Settlement();
+        city.setName("Пувуа");
+        city.setId(123);
+        city.setLatitude(234.55);
+        city.setLongitude(345.75);
+
+        Location villageOne = new Waypoint();
+        villageOne.setName("Мнио");
+        villageOne.setId(345);
+        villageOne.setLatitude(123.45);
+        villageOne.setLongitude(789.65);
+
+        Location villageTwo = new Settlement();
+        villageTwo.setName("Бебуа");
+        villageTwo.setId(567);
+        villageTwo.setLatitude(275.89);
+        villageTwo.setLongitude(195.38);
+
+        routeOne.addNewLocation(city);
+        routeOne.addNewLocation(villageOne);
+        routeOne.addNewLocation(villageTwo);
+
+        routeTwo.addNewLocation(city);
+        routeTwo.addNewLocation(villageOne);
+        routeTwo.addNewLocation(villageTwo);
+
+        Assert.assertEquals(routeTwo, routeOne);
+
+        routeOne.removeLocation(1);
+        routeOne.addNewLocation(villageOne);
+
+        Assert.assertNotEquals(routeTwo, routeOne);
+    }
 }
