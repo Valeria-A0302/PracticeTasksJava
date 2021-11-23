@@ -19,4 +19,9 @@ public class Settlement extends Location {
     public SettlementType getType() {
         return type;
     }
+
+    @Override
+    public String toString() {
+        return "Тип поселения: " + getType() + '\n' + "Название: " + getName() + '\n' + "Широта и долгота: " + getLatitude() + ' ' + getLongitude() + '\n';
+    }
 }
