@@ -96,4 +96,13 @@ public class CompanyModelTest {
 
         Assert.assertEquals(allDrivers.size(), 1);
     }
+
+    @Test
+    public static void testAssignRoute() {
+        CompanyModel companyModel = new CompanyModel();
+        Route route = new Route();
+        Driver driver = new Driver();
+        companyModel.assignRoute(driver, route);
+        Assert.assertEquals(companyModel.getDriverRouteMap().get(driver), route);
+    }
 }

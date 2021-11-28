@@ -2,16 +2,18 @@ package ru.ssau.tk.valeria.practice.transportation;
 
 import ru.ssau.tk.valeria.practice.Gender;
 
-import java.util.Collection;
-import java.util.Date;
-import java.util.LinkedHashSet;
-import java.util.List;
+import java.util.*;
 
 public class CompanyModel {
     Collection<Location> allLocations;
     Collection<Route> allRoutes;
     Collection<Driver> allDrivers;
     private int maxId = 0;
+    Map<Driver, Route> driverRouteMap;
+
+    public Map<Driver, Route> getDriverRouteMap() {
+        return driverRouteMap;
+    }
 
     public Collection<Location> getAllLocations() {
         return allLocations;
@@ -29,6 +31,7 @@ public class CompanyModel {
         allLocations = new LinkedHashSet<>();
         allRoutes = new LinkedHashSet<>();
         allDrivers = new LinkedHashSet<>();
+        driverRouteMap = new LinkedHashMap<>();
     }
 
     public Settlement addSettlement(String name, double latitude, double longitude, SettlementType type, int population) {
@@ -75,5 +78,9 @@ public class CompanyModel {
         }
         allRoutes.add(route);
         return route;
+    }
+
+    public void assignRoute(Driver driver, Route route) {
+        driverRouteMap.put(driver, route);
     }
 }
