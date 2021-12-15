@@ -215,4 +215,26 @@ public class RouteTest {
 
         System.out.println(routeOne);
     }
+
+    @Test
+    public static void testLength() {
+        Route route = new Route();
+        Settlement settlementOne = new Settlement();
+        settlementOne.setLatitude(123.2);
+        settlementOne.setLongitude(120.5);
+
+        Waypoint waypointOne = new Waypoint();
+        waypointOne.setLatitude(110.2);
+        waypointOne.setLongitude(105.5);
+
+        Settlement settlementTwo = new Settlement();
+        settlementTwo.setLatitude(80.3);
+        settlementTwo.setLongitude(83.2);
+
+        route.addNewLocation(settlementOne);
+        route.addNewLocation(waypointOne);
+        route.addNewLocation(settlementTwo);
+
+        Assert.assertEquals(route.length(), 4891.9730, 0.0001);
+    }
 }
