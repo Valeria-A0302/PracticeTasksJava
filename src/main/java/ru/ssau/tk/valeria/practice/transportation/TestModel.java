@@ -10,33 +10,33 @@ import static ru.ssau.tk.valeria.practice.transportation.SettlementType.*;
 import static ru.ssau.tk.valeria.practice.transportation.WaypointType.*;
 
 public class TestModel {
-    protected Settlement settlementOne;
-    protected Settlement settlementTwo;
-    protected Settlement settlementThree;
-    protected Settlement settlementFour;
-    protected Settlement settlementFive;
-    protected Settlement settlementSix;
-    protected Settlement settlementSeven;
-    protected Settlement settlementEight;
-    protected Settlement settlementNine;
-    protected Settlement settlementTen;
+    protected Settlement settlementOne = new Settlement();
+    protected Settlement settlementTwo = new Settlement();
+    protected Settlement settlementThree = new Settlement();
+    protected Settlement settlementFour = new Settlement();
+    protected Settlement settlementFive = new Settlement();
+    protected Settlement settlementSix = new Settlement();
+    protected Settlement settlementSeven = new Settlement();
+    protected Settlement settlementEight = new Settlement();
+    protected Settlement settlementNine = new Settlement();
+    protected Settlement settlementTen = new Settlement();
 
-    protected Waypoint waypointOne;
-    protected Waypoint waypointTwo;
-    protected Waypoint waypointThree;
-    protected Waypoint waypointFour;
-    protected Waypoint waypointFive;
-    protected Waypoint waypointSix;
-    protected Waypoint waypointSeven;
-    protected Waypoint waypointEight;
-    protected Waypoint waypointNine;
-    protected Waypoint waypointTen;
+    protected Waypoint waypointOne = new Waypoint();
+    protected Waypoint waypointTwo = new Waypoint();
+    protected Waypoint waypointThree = new Waypoint();
+    protected Waypoint waypointFour = new Waypoint();
+    protected Waypoint waypointFive = new Waypoint();
+    protected Waypoint waypointSix = new Waypoint();
+    protected Waypoint waypointSeven = new Waypoint();
+    protected Waypoint waypointEight = new Waypoint();
+    protected Waypoint waypointNine = new Waypoint();
+    protected Waypoint waypointTen = new Waypoint();
 
-    protected Driver driverOne;
-    protected Driver driverTwo;
-    protected Driver driverThree;
-    protected Driver driverFour;
-    protected Driver driverFive;
+    protected Driver driverOne = new Driver();
+    protected Driver driverTwo = new Driver();
+    protected Driver driverThree = new Driver();
+    protected Driver driverFour = new Driver();
+    protected Driver driverFive = new Driver();
 
     protected Date dateOne;
     protected Date dateTwo;
@@ -44,11 +44,11 @@ public class TestModel {
     protected Date dateFour;
     protected Date dateFive;
 
-    protected Route routeOne;
-    protected Route routeTwo;
-    protected Route routeThree;
-    protected Route routeFour;
-    protected Route routeFive;
+    protected Route routeOne = new Route();
+    protected Route routeTwo = new Route();
+    protected Route routeThree = new Route();
+    protected Route routeFour = new Route();
+    protected Route routeFive = new Route();
 
     public TestModel() {
         settlementOne.setSettlement(53442);

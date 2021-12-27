@@ -218,23 +218,34 @@ public class RouteTest {
 
     @Test
     public static void testLength() {
-        Route route = new Route();
-        Settlement settlementOne = new Settlement();
-        settlementOne.setLatitude(123.2);
-        settlementOne.setLongitude(120.5);
+        TestModel model = new TestModel();
+        Assert.assertEquals(model.routeOne.length(), 15776.5889, 0.0001);
+        Assert.assertEquals(model.routeTwo.length(), 17838.5493, 0.0001);
+        Assert.assertEquals(model.routeThree.length(), 23569.9404, 0.0001);
+        Assert.assertEquals(model.routeFour.length(), 39824.0508, 0.0001);
+        Assert.assertEquals(model.routeFive.length(), 7837.4522, 0.0001);
+    }
 
-        Waypoint waypointOne = new Waypoint();
-        waypointOne.setLatitude(110.2);
-        waypointOne.setLongitude(105.5);
+    @Test
+    public static void testCompareTo() {
+        TestModel model = new TestModel();
 
-        Settlement settlementTwo = new Settlement();
-        settlementTwo.setLatitude(80.3);
-        settlementTwo.setLongitude(83.2);
+        List<Route> allRoutesOne = new ArrayList<>();
+        allRoutesOne.add(model.routeOne);
+        allRoutesOne.add(model.routeTwo);
+        allRoutesOne.add(model.routeThree);
+        allRoutesOne.add(model.routeFour);
+        allRoutesOne.add(model.routeFive);
 
-        route.addNewLocation(settlementOne);
-        route.addNewLocation(waypointOne);
-        route.addNewLocation(settlementTwo);
+        Collections.sort(allRoutesOne);
 
-        Assert.assertEquals(route.length(), 4891.9730, 0.0001);
+        List<Route> allRoutesTwo = new ArrayList<>();
+        allRoutesTwo.add(model.routeFive);
+        allRoutesTwo.add(model.routeOne);
+        allRoutesTwo.add(model.routeTwo);
+        allRoutesTwo.add(model.routeThree);
+        allRoutesTwo.add(model.routeFour);
+
+        Assert.assertEquals(allRoutesOne, allRoutesTwo);
     }
 }
